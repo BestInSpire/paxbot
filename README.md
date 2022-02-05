@@ -2,8 +2,9 @@
 Paxanya sunucusu için özel yapılmış discord botu.
 
 # Requirements
-<li><a href="https://nodejs.org/en/">Node.JS v16</a></li>
-
+<ul>
+  <li><a href="https://nodejs.org/en/">Node.JS v16</a></li>
+</ul>
 # Setup
 <ul>
   <li>Download Project</li>
