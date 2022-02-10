@@ -7,10 +7,11 @@ Paxanya sunucusu için özel yapılmış discord botu.
 </ul>
 
 # Setup
-<ul>
-  <li>Download Project</li>
-  <li>Configure .env file</li>
-  <li>$ npm install -g yarn</li>
-  <li>$ yarn install</li>
-  <li>$ yarn dev</li>
-</ul>
+
+```bash
+Download Project
+Configure .env file
+$ npm install -g yarn
+$ yarn global add ts-node
+$ yarn install
+$ yarn dev
