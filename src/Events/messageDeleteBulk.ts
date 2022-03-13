@@ -2,7 +2,7 @@
 import { EventStructure } from '../Base/Events';
 import { ClientType } from '..';
 import { dataModels } from '../Structures/database';
-import { Message, Snowflake, Collection } from 'discord.js';
+import { Message, Snowflake, Collection, MessageAttachment } from 'discord.js';
 
 export default (client: ClientType) =>
 	new EventStructure({
@@ -16,7 +16,7 @@ export default (client: ClientType) =>
 			var messagesAr = messages.map(
 				(m) =>
 					`${m.author.tag} (${m.id}): ${m.content} | "Ek(ler)"${m.attachments
-						.map((g: any) => g.url)
+						.map((g: MessageAttachment) => g.url)
 						.join(', ')}`,
 			);
 			var messageBuf =
