@@ -11,8 +11,6 @@ export default (client: ClientType) =>
 	new EventStructure({
 		on: 'messageCreate',
 		execute: async (message: Message) => {
-			if (!['720690676978810992', '914929854980427788', '838458558290329671'].includes(`${message.guild?.id}`))
-				return;
 			const prefix: string = `${process.env.PREFIX}`;
 			const args = message.content.split(' ').slice(1);
 			if (message.content.startsWith(prefix)) {
