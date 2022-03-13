@@ -20,17 +20,17 @@ export default (client: ClientType) =>
     },
 
     execute: async (interaction: BaseCommandInteraction) => {
-      interaction.reply({
-        embeds: [
-          new MessageEmbed()
-            .setColor(`#${process.env.EMBEDCOLOR}`)
-            .setDescription(
-              `Api Gecikmesi: **${client.ws.ping}ms**\nMesaj Gecikmesi: **${
-                Date.now() - interaction.createdTimestamp
-              }ms**`
-            )
-            .setTimestamp(),
-        ],
-      });
+        interaction.reply({
+            embeds: [
+              new MessageEmbed()
+                .setColor(`#${process.env.EMBEDCOLOR}`)
+                .setDescription(
+                  `Api Gecikmesi: **${client.ws.ping}ms**\nMesaj Gecikmesi: **${
+                    Date.now() - interaction.createdTimestamp
+                  }ms**`
+                )
+                .setTimestamp(),
+            ],
+          });
     },
   });
