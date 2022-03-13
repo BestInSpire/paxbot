@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/bestinspire/paxbot/badge)](https://www.codefactor.io/repository/github/bestinspire/paxbot)
+
 # paxbot
 Paxanya sunucusu için özel yapılmış discord botu.
 
