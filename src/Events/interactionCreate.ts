@@ -3,7 +3,7 @@ import { EventStructure } from '../Base/Events';
 import { ClientType, developers, slashCommands } from '..';
 import { BitField, Interaction, MessageEmbed, PermissionString, RecursiveReadonlyArray } from 'discord.js';
 import humanizeDuration from 'humanize-duration';
-let commandCooldown: any = {};
+let commandCooldown = {};
 
 export default (client: ClientType) =>
 	new EventStructure({
@@ -118,7 +118,7 @@ export default (client: ClientType) =>
 					);
 					return interaction.reply({ embeds: [botPermissionsEmbed] });
 				}
-
+				//@ts-ignore
 				let userCooldown = commandCooldown[interaction.user.id];
 				if (userCooldown && !developers.includes(interaction.user.id)) {
 					const time = userCooldown[command.props.name] || 0;
@@ -142,7 +142,9 @@ export default (client: ClientType) =>
 				});
 			try {
 				command.execute(interaction);
+				//@ts-ignore
 				commandCooldown[interaction.user.id] = {};
+				//@ts-ignore
 				commandCooldown[interaction.user.id][command.props.name] = Date.now() + command.data.cooldown;
 			} catch (error) {
 				console.error(error);
