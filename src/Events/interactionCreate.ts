@@ -9,10 +9,6 @@ export default (client: ClientType) =>
 	new EventStructure({
 		on: 'interactionCreate',
 		execute: (interaction: Interaction) => {
-			if (
-				!['720690676978810992', '914929854980427788', '838458558290329671'].includes(`${interaction.guild?.id}`)
-			)
-				return;
 			if (!interaction.isCommand()) return;
 			const CommandName = interaction.commandName;
 			//@ts-ignore
